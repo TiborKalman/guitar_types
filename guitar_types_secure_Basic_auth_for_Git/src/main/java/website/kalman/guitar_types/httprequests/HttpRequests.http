@@ -1,0 +1,59 @@
+
+###
+POST http://localhost:8080/guitar-types
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Stratocaster Style",
+    "description": "FGN, SQUIER, FENDER, PRS,YAMAHA, etc..."
+}
+###
+PUT http://localhost:8080/guitar-types/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Paula",
+  "description": "Gibson"
+}
+
+###
+GET http://localhost:8080/guitar-types/1
+Content-Type: application/json
+Authorization: Basic admin pw
+###
+GET http://localhost:8080/guitar-types/11
+Content-Type: application/json
+Authorization: Basic admin pw
+
+### Get all
+GET http://localhost:8080/guitar-types
+Content-Type: application/json
+Authorization: Basic tkalman pw
+
+###
+DELETE http://localhost:8080/guitar-types/4
+Content-Type: application/json
+Authorization: Basic admin pw
+###
+
+POST http://localhost:8080/guitar-types/authorization/anmeldung
+Content-Type: application/json
+#Authorization: Basic admin pw
+
+{
+  "username": "Du",
+  "password": "pw",
+  "emailAccount": "ich@irgendwo.de",
+  "name": "Du"
+}
+###
+POST http://localhost:8080/guitar-types/authorization/login
+Content-Type: application/json
+
+{
+  "username": "Du",
+  "password": "pw"
+}
+###
